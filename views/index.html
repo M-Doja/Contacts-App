@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='ContactsApp'>
+<head>
+	<title>coder-camps-js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+<body >
+	<!-- <h1 ng-bind='appTitle'></h1>
+	<input type='text' ng-model='appTitle'>
+	<input type='text' ng-model='appTitle'>
+	<p>{{appTitle}}</p> -->
+	<!-- <ul ng-controller='GlobalController'>
+		<li>My Name: {{me.name}}</li>
+		<li>My location: {{me.location}}</li>
+		<li>My favColor: {{me.favColor}}</li>
+		<li>Are you a student? : {{me.student}}</li></ul> -->
+
+	<!-- <ul> <!-- itereating thru object -->
+		<!-- <li ng-repeat='prop in me'>{{prop}}</li></ul> -->
+	<!-- <ul> <!-- itereating thru  -->
+
+		<!-- <li ng-repeat='index in students track by $index'>
+			<button ng-click='add($index)'>{{index}}</button></li>
+			
+	</ul>  -->
+	<ui-view></ui-view>
+
+		<!-- Libs -->
+	<script src="/angular/angular.js"></script>
+	<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+		<!-- modules -->
+	<script src="/javascript/app.js"></script>
+		<!-- services/factories -->
+	<script src="/javascript/services/ContactService.js"></script>
+	<script src="/javascript/services/ContactFactory.js"></script>
+		<!-- cotrollers -->
+	<script src="/javascript/controllers/MainController.js"></script>
+	<script src="/javascript/controllers/AddContactController.js"></script>
+	<script src="/javascript/controllers/EditContactController.js"></script>
+</body>
+</html>

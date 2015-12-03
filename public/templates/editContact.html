@@ -1,0 +1,17 @@
+<h1>Edit page</h1>
+<div>
+  <div style="text-align:center;">
+    <a ui-sref="Home" class="btn btn-primary">Home</a>
+  </div>
+  <form class="well container" ng-submit="vm.editContact()">
+    <label>Name</label>
+    <input class="form-control" placeholder="Name.." ng-model='vm.contact.name'required/>
+    <label>Phone</label>
+    <input class="form-control" type='tel' size='3'placeholder="Phone.." ng-model='vm.contact.phone'required/>
+    <label>Email</label>
+    <input class="form-control" placeholder="Email.." ng-model='vm.contact.email'required/>
+    <div style="text-align:center">
+      <button type="submit" class="btn btn-success" ng-disable='!vm.contact.name||!vm.contact.phone||!vm.contact.email'>Submit</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+<h1>Contacts App</h1>
+<div ng-controller='MainController as vm'>
+  <div style="text-align:center" ng-show='!vm.creatingUser'>
+    <button type="button" class="btn btn-success" ui-sref='AddContact'>Create a new user</button>
+  </div>
+<h1>{{vm.name}}</h1>
+  <!-- <div class="well container form-inline" style="text-align:center" ng-show='vm.creatingUser'>
+    <input class="form-control" placeholder="Name.." ng-model='vm.newUser.name'>
+    <input class="form-control" placeholder="Phone Number.." ng-model='vm.newUser.phone'>
+    <input class="form-control" placeholder="Email.." ng-model='vm.newUser.email'>
+    <button type="button" class="btn btn-success" ng-click='vm.saveUser();'>Submit</button>
+    <button type="button" class="btn btn-danger" ng-click='vm.creatingUser = false;'>Cancel</button>
+  </div> -->
+  <input style='margin-left:590px' placeholder='Search By Name..' class="form control" ng-model='peanutbutter.name'>
+
+    <div ng-repeat="c in vm.contacts | filter:peanutbutter">
+      <div class="well container" >
+        <h2>{{c.name}}</h2>
+        <h4>{{c.phone}}</h4>
+        <h4>{{c.email}}</h4>
+        <a class="btn btn-warning" ui-sref='EditContact({id: c._id})'>Edit Contact</a>
+        <button type="button" class="btn btn-danger" ng-click='vm.deleteUser(c)'>Delete</button>
+      </div>
+  </div>
+</div>	<!-- End of MainController -->
