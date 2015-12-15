@@ -23,9 +23,12 @@ angular.module('ContactsApp').factory('ContactFactory', function($http, $q){
   }
 
   o.deleteUser = function(id){
+    var q = $q.defer();
     $http.delete("https://brilliant-fire-3806.firebaseio.com/" + id + "/.json").success(function(){
-      o.getContacts();
+      q.resolve()
+      // o.getContacts();
     });
+    return q.promise;
   }
 return o;
 

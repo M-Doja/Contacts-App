@@ -9,7 +9,9 @@ angular.module('ContactsApp').controller('MainController', function($http, Conta
   }
   vm.getContacts();
   vm.deleteUser = function(contact){
-    ContactFactory.deleteUser(contact._id);
+    ContactFactory.deleteUser(contact._id).then(function(){
+      // vm.getContacts();      
+    });
   }
 
 });
